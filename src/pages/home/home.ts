@@ -52,8 +52,8 @@ export class HomePage {
 
   loadMap() {
     this.map = L.map('map', {
-      center: [18.00, 100.50],
-      zoom: 8,
+      center: [13.0390905, 101.490104],
+      zoom: 6,
       zoomControl: false,
       attributionControl: false,
     })
@@ -91,7 +91,7 @@ export class HomePage {
 
     this.lyrGroup = {
       lyr: [
-        { name: 'ขอบเขตไปรษณีย์', lyr: 'ud_amp', wms: this.postcodeLyr.addTo(this.map), type: 'overlay', 'isChecked': true },
+        { name: 'ขอบเขตไปรษณีย์', lyr: 'postcodeLyr', wms: this.postcodeLyr.addTo(this.map), type: 'overlay', 'isChecked': true },
         // { name: 'ขอบเขตอำเภอ', lyr: 'ud_amp', wms: this.ud_amp.addTo(this.map), type: 'overlay', 'isChecked': true },
         // { name: 'ขอบเขตตำบล', lyr: 'ud_tam', wms: this.ud_tam.addTo(this.map), type: 'overlay', 'isChecked': true },
         { name: 'แผนที่ถนน', lyr: 'roads', wms: this.roads.addTo(this.map), type: 'base', 'isChecked': false },
@@ -182,11 +182,11 @@ export class HomePage {
 
         this.marker = L.marker(this.pos, { draggable: false })
           .addTo(this.map)
-          .bindPopup("<b>id:</b>" + this.id
-            + "<p><b>id:</b>" + this.db
-            + "<p><b>postcode:</b>" + this.postcode
-            + "<p><b>lon:</b>" + lon
-            + "<p><b>lat:</b>" + lat)
+          .bindPopup("<h6>ID: " + this.id 
+            + "<br>DB: " + this.db 
+            + "<br>POSC: " + this.postcode 
+            + "<br>Lon: " + lon 
+            + "<br>Lat: " + lat + "</h6>")
           .openPopup();
       }
     })
