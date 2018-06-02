@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Kanit';
+    src: url(../assets/fonts/Kanit-Regular.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Kanit-Bold';
+    src: url(../assets/fonts/Kanit-Bold.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Kanit-Light';
+    src: url(../assets/fonts/Kanit-Light.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Kanit-Thin';
+    src: url(../assets/fonts/Kanit-Thin.ttf) format('truetype');
+  }
+  
+  .kanit {
+    font-family: 'Kanit' !important;
+  }
+  
+  .kanit-light {
+    font-family: 'Kanit-Light' !important;
+  }
+  
+  #d-font {
+    font-family: 'Kanit' !important;
+  }
+  
+  #d-content {
+    background-color: #CFD8DC;
+    font-family: 'Kanit-Light' !important;
+  }
+  
+  

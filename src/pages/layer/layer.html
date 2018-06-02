@@ -1,0 +1,38 @@
+<ion-header class="kanit">
+  <ion-toolbar>
+    <ion-title>
+      ชั้นข้อมูล
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="kanit">
+  <ion-list>
+    <ion-list-header>
+      เลือกชั้นข้อมูล
+    </ion-list-header>
+    <ion-item *ngFor="let o of lyrOver; let i = index">
+      <ion-label>{{o.name}}</ion-label>
+      <ion-checkbox [(ngModel)]="o.isChecked" (ionChange)="onCheckWms(o.lyr,$event.checked)"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <p></p>
+  <p></p>
+  <ion-list radio-group (ionChange)="onSelect($event)">
+    <ion-list-header>
+      เลือก base map
+    </ion-list-header>
+
+    <ion-item *ngFor="let lyr of lyrBase; let i = index">
+      <ion-label>{{lyr.name}}</ion-label>
+      <ion-radio [value]="lyr.lyr" [checked]="lyr.isChecked"></ion-radio>
+    </ion-item>
+  </ion-list>
+</ion-content>
